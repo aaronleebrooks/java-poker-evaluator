@@ -104,7 +104,7 @@
             <classpath refid="run.Solution.classpath"/>
         </java>
     </target>
-    <target name="SolutionTest">
+    <target name="test">
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
