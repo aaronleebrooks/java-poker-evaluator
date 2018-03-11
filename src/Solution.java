@@ -158,20 +158,15 @@ class Hand{
 //Solution accepts the input, and prints the best hand.
 public class Solution {
     public static String main(String[] args) {
-        
-//Scanner is super cool. I went through a few HackerRanks today while I was playing around with Java and you can do some
-//pretty cool stuff.
-//        Scanner scan = new Scanner(System.in);
-        
+                
 //cardArray is an array of all of our cards.
         Card[] cardArray = new Card[5];
         
 //This loop makes all of those cards and adds them to the cardArray.
         for(int i=0; i <= 4; i++){
-        	String newCard = args[i];
+            String newCard = args[i];
             cardArray[i] = new Card(newCard);
         }
-//        scan.close();
 //h is our hand. We get to call our handRank method with returns the best hand. and Voila! We did it!
         Hand h = new Hand(cardArray);
         System.out.println(h.handRank());
