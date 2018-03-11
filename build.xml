@@ -46,7 +46,7 @@
         <pathelement location="../../.local/share/umake/ide/eclipse/plugins/org.junit_4.12.0.v201504281640/junit.jar"/>
         <pathelement location="../../.local/share/umake/ide/eclipse/plugins/org.hamcrest.core_1.3.0.v201303031735.jar"/>
     </path>
-    <path id="run.test.classpath">
+    <path id="run.SolutionTest.classpath">
         <path refid="poker-evaluator.classpath"/>
         <pathelement location="../../.local/share/umake/ide/eclipse/plugins/org.junit.jupiter.api_5.0.0.v20170910-2246.jar"/>
         <pathelement location="../../.local/share/umake/ide/eclipse/plugins/org.junit.jupiter.engine_5.0.0.v20170910-2246.jar"/>
@@ -104,14 +104,15 @@
             <classpath refid="run.Solution.classpath"/>
         </java>
     </target>
-    <target name="test">
+    <target name="SolutionTest">
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
             <test name="SolutionTest" todir="${junit.output.dir}"/>
             <jvmarg line="-ea"/>
-            <classpath refid="run.test.classpath"/>
+            <classpath refid="run.SolutionTest.classpath"/>
         </junit>
+    	<antcall target="test"/>
     </target>
     <target name="junitreport">
         <junitreport todir="${junit.output.dir}">
