@@ -110,7 +110,7 @@
             <formatter type="xml"/>
             <test name="SolutionTest" todir="${junit.output.dir}"/>
             <jvmarg line="-ea"/>
-            <classpath refid="run.SolutionTest.classpath"/>
+            <classpath refid="run.test.classpath"/>
         </junit>
     </target>
     <target name="junitreport">
