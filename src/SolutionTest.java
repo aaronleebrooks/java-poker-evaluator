@@ -67,5 +67,4 @@ public class SolutionTest {
 		String handResult = Solution.main(falseHighCard);
 		assertEquals("high card", handResult, "4H, 2D, KD, QC, TH should return 'high card'");
 	}
-
 }
